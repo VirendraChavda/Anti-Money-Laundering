@@ -49,39 +49,51 @@ The dataset was preprocessed by:
 </p>
 
 ### 2. Network Construction
+<p align="justify">
 A directed network graph was created using the processed transaction data:
 
 * **Nodes** represent accounts, and edges represent transactions between these accounts.
 * Network visualization was generated to display the flow of transactions and the structure of relationships between accounts.
+</p>
 
 ### 3. Centrality Measures
+<p align="justify">
 The following centrality measures were calculated to identify important nodes (accounts):
 
 * **Degree Centrality**: Measures the number of transactions linked to an account.
 * **Closeness Centrality**: Identifies how quickly an account can access other accounts in the network.
 * **Betweenness Centrality**: Detects nodes that act as intermediaries in the flow of transactions.
-
+</p>
+  
 ### 4.Community Detection
+<p align="justify">
 The **Girvan-Newman algorithm** was applied to identify clusters of nodes that form communities within the transaction network. These communities were analyzed to determine if any suspicious nodes (e.g., high centrality scores) were present.
+</p>
 
 ### 5. Visualisation
+<p align="justify">
 * A **degree distribution plot** was generated to identify accounts with significantly higher transaction activity.
 * **Communities** were highlighted with different colors, and key nodes (based on centrality) were visualized within these communities to observe their potential roles in money laundering schemes.
+</p>
 
 ## Results:
-
+<p align="justify">
 * **Key Nodes**: Nodes with high degree, closeness, and betweenness centrality were identified as potential collectors or intermediaries in laundering schemes. For example, Node 9993 was found to be a collector within a community, having a high degree and acting as a hub for incoming transactions.
 * **Communities**: The network was split into several communities, with certain nodes playing dominant roles in these clusters. These nodes were flagged as suspicious due to their centrality within the community.
 * **Network Analysis Effectiveness**: Network analysis techniques effectively highlighted nodes that could be of interest for further investigation, indicating that these methods can complement traditional rule-based or machine learning approaches in anti-money laundering efforts.
+</p>
 
 ## Future Work:
+<p align="justify">
 * **Integration with Machine Learning**: Centrality and community detection results can be used as features in a machine learning model to predict fraudulent accounts.
 * **Expanding the Dataset**: The analysis can be expanded to include the full dataset for more comprehensive insights.
 * **Feature Addition**: Incorporating additional account information such as account type, ownership, and geographical location could improve the identification of suspicious accounts.
+</p>
 
 ## Contributing
-
+<p align="justify">
 Contributions are welcome! If you would like to suggest improvements, report issues, or contribute to the project, feel free to open a pull request or submit an issue.
+</p>
 
 ## License
 

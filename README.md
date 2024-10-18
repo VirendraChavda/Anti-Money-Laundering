@@ -1,7 +1,9 @@
 # Network Analysis for Money Laundering Detection
 ### Author: Virendrasinh Chavda
 
+<p align="justify">
 This repository contains the code and analysis for detecting suspicious transactions and accounts involved in money laundering using **network analysis**. The project explores how centrality measures, community detection algorithms, and visualization techniques can identify key players in fraudulent networks. 
+</p>
 
 ## Table of Contents
 1. [Overview](#Overview)

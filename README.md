@@ -15,12 +15,18 @@ This repository contains the code and analysis for detecting suspicious transact
 7. [License](#License)
 
 ## Overview
+<p align="justify">
 Money laundering is a sophisticated financial crime where illicit funds are disguised as legitimate. Traditional rule-based detection methods struggle with evolving and complex laundering schemes. In this project, we use **network analysis** techniques to detect money laundering by identifying central and suspicious nodes (accounts) in transaction networks. Centrality measures like **degree**, **closeness**, and **betweenness centrality** help uncover significant nodes. Additionally, community detection algorithms such as the **Girvan-Newman algorithm** are employed to isolate suspicious clusters of accounts.
+</p>
 
+<p align="justify">
 This project focuses on identifying key nodes and their roles in money laundering networks based on transaction patterns in a synthetic banking dataset. The project applies network analysis concepts to visualize and analyze suspicious activities, which can be further integrated with machine learning for predictive modeling.
+</p>
 
 ## Data:
+<p align="justify">
 The dataset used for this project is sourced from the [IBM AMLSim Dataset](https://www.kaggle.com/datasets/anshankul/ibm-amlsim-example-dataset), which simulates real-world banking transactions. It consists of 1.32 million transaction records with attributes like:
+</p>
 
 * **TX_ID**: Transaction ID
 * **SENDER_ACCOUNT_ID**: The sender's account number
@@ -28,15 +34,19 @@ The dataset used for this project is sourced from the [IBM AMLSim Dataset](https
 * **TX_AMOUNT**: The amount of the transaction
 * **IS_FRAUD**: A binary label indicating whether the transaction is fraudulent
 
+<p align="justify">
 For the purposes of this project, a subset of 2000 transactions was sampled and used for analysis due to computational constraints. Columns related to transaction type, timestamp, and fraud labels were excluded, focusing on **network properties**.
+</p>
 
 ## Methodology:
 ### 1. Preprocessing
+<p align="justify">
 The dataset was preprocessed by:
 
 * Grouping transactions from the same accounts and aggregating them to form a more manageable network.
 * Renaming columns: **SENDER_ACCOUNT_ID** as **SOURCE** and **RECEIVER_ACCOUNT_ID** as **TARGET**.
 * Aggregating transaction data to calculate the total transaction count and total **transaction amount** between pairs of accounts.
+</p>
 
 ### 2. Network Construction
 A directed network graph was created using the processed transaction data:

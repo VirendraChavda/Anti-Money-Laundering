@@ -42,28 +42,29 @@ For the purposes of this project, a subset of 2000 transactions was sampled and 
 ### 1. Preprocessing
 <p align="justify">
 The dataset was preprocessed by:
-
+</p>
 * Grouping transactions from the same accounts and aggregating them to form a more manageable network.
 * Renaming columns: <strong>SENDER_ACCOUNT_ID</strong> as <strong>SOURCE</strong> and <strong>RECEIVER_ACCOUNT_ID</strong> as <strong>TARGET</strong>.
 * Aggregating transaction data to calculate the total transaction count and total <strong>transaction amount</strong> between pairs of accounts.
-</p>
+
 
 ### 2. Network Construction
 <p align="justify">
 A directed network graph was created using the processed transaction data:
+</p>
 
 * <strong>Nodes</strong> represent accounts, and edges represent transactions between these accounts.
 * Network visualization was generated to display the flow of transactions and the structure of relationships between accounts.
-</p>
 
 ### 3. Centrality Measures
 <p align="justify">
 The following centrality measures were calculated to identify important nodes (accounts):
+</p>
 
 * <strong>Degree Centrality</strong>: Measures the number of transactions linked to an account.
 * <strong>Closeness Centrality</strong>: Identifies how quickly an account can access other accounts in the network.
 * <strong>Betweenness Centrality</strong>: Detects nodes that act as intermediaries in the flow of transactions.
-</p>
+
   
 ### 4.Community Detection
 <p align="justify">
@@ -71,24 +72,18 @@ The <strong>Girvan-Newman algorithm</strong> was applied to identify clusters of
 </p>
 
 ### 5. Visualisation
-<p align="justify">
 * A <strong>degree distribution plot</strong> was generated to identify accounts with significantly higher transaction activity.
 * <strong>Communities</strong> were highlighted with different colors, and key nodes (based on centrality) were visualized within these communities to observe their potential roles in money laundering schemes.
-</p>
 
 ## Results:
-<p align="justify">
 * <strong>Key Nodes</strong>: Nodes with high degree, closeness, and betweenness centrality were identified as potential collectors or intermediaries in laundering schemes. For example, Node 9993 was found to be a collector within a community, having a high degree and acting as a hub for incoming transactions.
 * <strong>Communities</strong>: The network was split into several communities, with certain nodes playing dominant roles in these clusters. These nodes were flagged as suspicious due to their centrality within the community.
 * <strong>Network Analysis Effectiveness</strong>: Network analysis techniques effectively highlighted nodes that could be of interest for further investigation, indicating that these methods can complement traditional rule-based or machine learning approaches in anti-money laundering efforts.
-</p>
 
 ## Future Work:
-<p align="justify">
 * <strong>Integration with Machine Learning</strong>: Centrality and community detection results can be used as features in a machine learning model to predict fraudulent accounts.
 * <strong>Expanding the Dataset</strong>: The analysis can be expanded to include the full dataset for more comprehensive insights.
 * <strong>Feature Addition</strong>: Incorporating additional account information such as account type, ownership, and geographical location could improve the identification of suspicious accounts.
-</p>
 
 ## Contributing
 <p align="justify">

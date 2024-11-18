@@ -43,6 +43,7 @@ For the purposes of this project, a subset of 2000 transactions was sampled and 
 <p align="justify">
 The dataset was preprocessed by:
 </p>
+
 * Grouping transactions from the same accounts and aggregating them to form a more manageable network.
 * Renaming columns: <strong>SENDER_ACCOUNT_ID</strong> as <strong>SOURCE</strong> and <strong>RECEIVER_ACCOUNT_ID</strong> as <strong>TARGET</strong>.
 * Aggregating transaction data to calculate the total transaction count and total <strong>transaction amount</strong> between pairs of accounts.

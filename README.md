@@ -24,9 +24,7 @@ This project focuses on identifying key nodes and their roles in money launderin
 </p>
 
 ## Data:
-<p align="justify">
 The dataset used for this project is sourced from the [IBM AMLSim Dataset](https://www.kaggle.com/datasets/anshankul/ibm-amlsim-example-dataset), which simulates real-world banking transactions. It consists of 1.32 million transaction records with attributes like:
-</p>
 
 * <strong>TX_ID</strong>: Transaction ID
 * <strong>SENDER_ACCOUNT_ID</strong>: The sender's account number
